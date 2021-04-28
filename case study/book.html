@@ -1,0 +1,121 @@
+<html>
+
+<head>
+   
+    <title>Document</title>
+	<header>
+<a href ="Website.html" >return</a>
+</header>
+    <style>
+    body{
+        background: url(book.jpg),linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.1));
+        background-size: cover;
+        height: 100vh;
+        
+    }
+    tr td {
+        color:indigo;
+    }
+    h1{
+        text-align: center;
+        color: red;
+    }
+    </style>
+</head>
+
+<body>
+    <h1>Book your Appointment</h1>
+    <table align="center" cellpadding="7">
+        <form action="" name="myform" method="post"  onsubmit="return book()">
+            <tr>
+                <td >
+                    Patient name:
+                <td>
+                    <input type="text" id="name" placeholder="Patientname" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Age:
+                <td>
+                    <input type="text" id="age" placeholder="age" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Doctor-Type:
+                <td>
+                    <select id="dt" required>
+                        <option value="Cardiologist">Cardiologist</option>
+                        <option value="Dentist">Dentist</option>
+                        <option value="Dermatologists">Dermatologists</option>
+                        <option value="ENT Specialist">ENT Specialist</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Appointment-date:
+                <td>
+                    <input type="date" id="ad" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Time:
+                <td>
+                    <select id="t" required>
+                        <option value="10AM-12PM">10AM-12Pm</option>
+                        <option value="12PM-1PM">12PM-1PM</option>
+                        <option value="2PM-4PM">2PM-4PM</option>
+                        <option value="6PM-8PM">6PM-8PM</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                <td>
+                    <input type="submit">
+                </td>
+            </tr>
+
+        </form>
+    </table>
+
+    <script type="text/javascript">
+        function book() {
+
+            var name = document.getElementById("name").value;
+            var age = document.getElementById("age").value;
+            var dt = document.getElementById("dt").value;
+            var ad = document.getElementById("ad").value;
+            var time = document.getElementById("t").value;
+            if(name){
+            alert("appointment booked and details are");
+            document.write("Name of patient: "+name+"</br>");
+            document.write("Age: " + age + "</br>");
+            document.write("Doctor type: " + dt + "</br>");
+            document.write("Appointment date: " + ad + "</br>");
+            document.write("appointment time : " + time + "</br>");
+            return true;
+            }
+            else{
+                alert("Choose valid date");
+                return false;
+            }
+
+        }
+		
+		
+		<header>
+<a href ="Website.html" >return</a>
+
+</header>
+
+
+    </script>
+
+</body>
+
+</html>
